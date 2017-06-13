@@ -61,7 +61,9 @@ public class CoordenadasBO {
 	}
 	
 	private void goUp(Posicao posicao){
-		posicao.setZ(posicao.getZ() + 1);
+		if(posicao.getZ() < 0){
+			posicao.setZ(posicao.getZ() + 1);
+		}
 	}
 	
 	private void goDown(Posicao posicao){
